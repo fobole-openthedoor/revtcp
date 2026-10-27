@@ -1,0 +1,11 @@
+/bin/
+/dist/
+/certs/
+*.test
+coverage.out
+/.DS_Store
+/client.json
+*.key
+*.pem
+*.p12
+*.pfx

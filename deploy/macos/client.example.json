@@ -1,0 +1,17 @@
+{
+  "server": "tunnel.example.com:7443",
+  "target": "127.0.0.1:8080",
+  "server_name": "",
+  "cert": "certs/client.crt",
+  "key": "certs/client.key",
+  "ca": "certs/ca.crt",
+  "pool": 16,
+  "max_conns": 1024,
+  "dial_timeout": "10s",
+  "idle_timeout": "90s",
+  "retry_min": "250ms",
+  "retry_max": "15s",
+  "debug": false,
+  "log_max_mb": 10,
+  "log_backups": 3
+}

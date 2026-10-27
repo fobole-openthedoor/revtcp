@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>local.revtcp.client</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Library/Application Support/revtcp/bin/revtcp</string>
+        <string>client</string>
+        <string>--config</string>
+        <string>/Library/Application Support/revtcp/config/client.json</string>
+        <string>--log-file</string>
+        <string>/Library/Logs/revtcp/client.log</string>
+    </array>
+    <key>UserName</key>
+    <string>__RUN_USER__</string>
+    <key>WorkingDirectory</key>
+    <string>/Library/Application Support/revtcp</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>30</integer>
+    <key>ExitTimeOut</key>
+    <integer>15</integer>
+    <key>Umask</key>
+    <integer>63</integer>
+    <key>SoftResourceLimits</key>
+    <dict>
+        <key>NumberOfFiles</key>
+        <integer>8192</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Library/Logs/revtcp/launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Library/Logs/revtcp/launchd.log</string>
+</dict>
+</plist>
