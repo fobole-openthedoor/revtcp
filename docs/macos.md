@@ -1,5 +1,9 @@
 # macOS 客户端：后台运行、开机自启与配置
 
+项目主页：https://github.com/fobole-openthedoor/revtcp
+
+程序下载：https://github.com/fobole-openthedoor/revtcp/releases/latest
+
 客户端以 macOS **系统级 LaunchDaemon** 运行。启动系统后由 launchd 启动，无需保持终端打开，也不依赖桌面用户登录。进程退出后自动重新启动；网络不可用时，客户端自己持续退避重连。
 
 服务名为 `local.revtcp.client`。安装需要管理员权限，但客户端进程使用指定的**普通本地用户**身份运行，默认是执行 `sudo` 的用户。这是可查看、可停用、可卸载的普通系统服务。LaunchDaemon 和登录后才启动的 LaunchAgent 的区别见 [Apple launchd 文档](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html)。

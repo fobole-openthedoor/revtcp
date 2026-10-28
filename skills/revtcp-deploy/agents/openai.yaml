@@ -1,0 +1,4 @@
+interface:
+  display_name: "revtcp 部署与配置交付"
+  short_description: "新增独立端口映射、打包带项目下载链接的客户端配置并上传直链"
+  default_prompt: "使用 $revtcp-deploy 新增一个端口转发，保留已有实例，并交付包含项目链接的客户端配置包和下载直链。"

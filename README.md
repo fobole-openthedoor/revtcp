@@ -39,6 +39,12 @@ CGO_ENABLED=0 go build -trimpath -o bin/revtcp ./cmd/revtcp
 
 一个二进制提供 `init`、`server`、`client` 三个子命令。
 
+## 复用部署技能与客户端配置包
+
+仓库内提供 [revtcp-deploy 技能](skills/revtcp-deploy/SKILL.md)，覆盖独立映射部署、客户端配置打包和按需上传直链。复制 `skills/revtcp-deploy` 到自己的 Codex skills 目录后，可以使用 `$revtcp-deploy` 调用。
+
+技能的 `scripts/package_client.py` 会把项目主页、发布页、各平台下载链接和配置方法写入每份客户端 ZIP 的 `README.txt`、`LINKS.txt`，接收方只需要收到一个配置包。每个业务端口有独立的 macOS 自启服务名。真实配置包包含客户端私钥，应放在 `dist/private/` 或仓库外的私有目录；上传令牌和上传回执保存在仓库之外。
+
 ## macOS 后台客户端与开机自启
 
 已提供 Apple Silicon / Intel 构建脚本、LaunchDaemon 安装及管理脚本、JSON 配置和轮转日志。

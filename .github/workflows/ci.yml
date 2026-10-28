@@ -26,6 +26,7 @@ jobs:
           cache: false
       - run: go test -race ./...
       - run: go vet ./...
+      - run: python3 -m unittest discover -s tests -v
       - run: bash -n deploy/macos/service.sh scripts/build-macos.sh scripts/build-release.sh
       - if: runner.os == 'macOS'
         run: plutil -lint deploy/macos/local.revtcp.client.plist
